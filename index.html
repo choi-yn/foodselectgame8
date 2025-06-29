@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>건강&영양교실</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header-flex">
+            <div class="header-center">
+                <h1 class="title">헬씨에게 건강한 음식을<br>찾아주세요!</h1>
+            </div>
+            <div class="score-board-group">
+                <div class="score-board">
+                    <div class="score-item">
+                        <span class="score-label">점수</span>
+                        <span class="score-value" id="score">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">시간</span>
+                        <span class="score-value" id="time">60</span>
+                    </div>
+                </div>
+                <div class="instructions">
+                    <h3>게임 방법</h3>
+                    <ul>
+                        <li>✅ 건강한 음식을 클릭하여 점수를 얻으세요!</li>
+                        <li>❌ 건강하지 않은 음식은 피하세요!</li>
+                        <li>⏰ 시간 내에 최고 점수를 달성하세요!</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="game-area">
+                <div class="food-container" id="foodContainer">
+                    <!-- 음식들이 여기에 동적으로 생성됩니다 -->
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-primary" id="startBtn">게임 시작</button>
+                <button class="btn btn-reset" id="resetBtn">다시 시작</button>
+            </div>
+        </main>
+
+        <div class="modal" id="gameOverModal">
+            <div class="modal-content">
+                <h2>게임 종료!</h2>
+                <p>최종 점수: <span id="finalScore">0</span></p>
+                <button class="btn btn-primary" id="playAgainBtn">다시 플레이</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
